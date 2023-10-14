@@ -59,7 +59,7 @@ const HeaderMobile = ({ toggle }: { toggle: any }) => {
       ref={containerRef}
     >
       <motion.div
-        className="absolute inset-0 right-0 w-full bg-transparent/5 backdrop-blur-sm"
+        className="absolute inset-0 right-0 w-full bg-white/30 backdrop-blur"
         variants={sidebar}
       />
       <motion.ul
