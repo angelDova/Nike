@@ -4,6 +4,7 @@ import headerLogo from "@/public/assets/images/header-logo.svg";
 import { navLinks } from "@/constants";
 import { Equal } from "lucide-react";
 import { MobileNavbar } from "./mobile-navbar";
+import HeaderMobile from "./header-mobile";
 
 const Navbar = () => {
   return (
@@ -26,7 +27,8 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="hidden max-lg:block">
-          <MobileNavbar />
+          {/* <MobileNavbar /> */}
+          <HeaderMobile />
         </div>
       </nav>
     </header>
