@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRightCircle } from "lucide-react";
+import { statistics } from "@/constants";
 
-const Hero = () => {
+interface HeroProps {
+  value: string;
+}
+
+const Hero = ({ value }: HeroProps) => {
   return (
     <section
       id="home"
-      className="w-full border-2 border-red-500 p-2 bg-blue-500"
+      className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red">
@@ -27,6 +32,15 @@ const Hero = () => {
           Shop now
           <ChevronRightCircle className="w-4 h-4" />
         </Button>
+
+        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
+          {statistics.map((stat) => (
+            <div key={stat.label} className="">
+              <p className="">{stat.value}</p>
+              <p className="">{stat.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

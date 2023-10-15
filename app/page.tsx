@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <main className="relative">
       <Navbar />
-      <section className="xl:padding-l wide:padding-r padding-b">
+      <section className="padding">
         <Hero />
       </section>
       <section className="padding">
