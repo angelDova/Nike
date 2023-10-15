@@ -36,17 +36,11 @@ const sidebar = {
   },
 };
 
-const HeaderMobile = ({ toggle }: { toggle: any }) => {
+const HeaderMobile = () => {
   const pathname = usePathname();
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-    toggle();
-  };
 
   return (
     <motion.nav
@@ -77,7 +71,7 @@ const HeaderMobile = ({ toggle }: { toggle: any }) => {
                 <MenuItem>
                   <Link
                     href={item.path}
-                    onClick={handleClick}
+                    onClick={() => toggleOpen()}
                     className={`flex w-full text-2xl ${
                       item.path === pathname ? "font-bold" : ""
                     }`}
